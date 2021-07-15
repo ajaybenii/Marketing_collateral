@@ -23,7 +23,7 @@ async def Real_image(Insert_image: UploadFile=File(...)):
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype("arial.ttf",40)
 
-    #HERE YOU CAN CHANGE YOUR TEXT DESCRIPTION
+    #HERE YOU CAN CHANGE TEXT 
     text= "Hello Square Yards"
     draw.text((0,420),text,(0,0,0),font=font)
 
