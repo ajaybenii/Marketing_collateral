@@ -31,5 +31,5 @@ async def Real_image(Insert_image: UploadFile=File(...)):
     image.save(buffer, format="jpeg", quality=100)
     buffer.seek(0)
     
-    return StreamingResponse(buffer, media_type="image/jpeg")
+    return StreamingResponse(buffer, media_type="image/jpg")
      
