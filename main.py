@@ -12,9 +12,9 @@ app = FastAPI()
 def index():
     return {"Hello":"Python"}
 
-text=input()
+
 @app.post("/uploadfile")
-async def image_enhance(Insert_image: UploadFile=File(...)):
+async def Real_image(Insert_image: UploadFile=File(...)):
     '''In this function we can upload image and add text 
     '''
     contents = await Insert_image.read()
