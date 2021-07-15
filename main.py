@@ -15,11 +15,15 @@ def index():
 text=input()
 @app.post("/uploadfile")
 async def image_enhance(Insert_image: UploadFile=File(...)):
+    '''In this function we can upload image and add text 
+    '''
     contents = await Insert_image.read()
     image = Image.open(BytesIO(contents))
     
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype("arial.ttf",40)
+
+    #HERE YOU CAN CHANGE YOUR TEXT DESCRIPTION
     text= "Hello Square Yards"
     draw.text((0,150),text,(0,0,0),font=font)
 
