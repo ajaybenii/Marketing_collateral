@@ -25,7 +25,7 @@ async def Real_image(Insert_image: UploadFile=File(...)):
 
     #HERE YOU CAN CHANGE YOUR TEXT DESCRIPTION
     text= "Hello Square Yards"
-    draw.text((0,150),text,(0,0,0),font=font)
+    draw.text((0,420),text,(0,0,0),font=font)
 
     buffer = BytesIO()
     image.save(buffer, format="jpeg", quality=100)
